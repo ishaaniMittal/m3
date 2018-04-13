@@ -176,6 +176,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
   //Receive list of maps after it is retrieved. This is only fired when fetchMapList is called (see updateMapTable())
   func onMapList(success: Bool, mapList: [String: Any]) -> Void {
     maps.removeAll()
+    
+    //Return back to home page
+    performSegue(withIdentifier: "HomeView", sender: self)
+    
+    /*
     if (!success) {
       print ("failed to fetch map list")
       statusLabel.text = "Map List not retrieved"
@@ -193,6 +198,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     self.mapTable.reloadData() //reads from maps array (see: tableView functions)
     self.mapTable.isHidden = false
     self.tapRecognizer?.isEnabled = false
+     */
   }
 
   // MARK: - UI functions
@@ -295,7 +301,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
       updateMapTable()
       pickMapButton.setTitle("Cancel", for: .normal)
       newMapButton.isEnabled = false
-      statusLabel.text = "Fetching Map List"
+      statusLabel.text = "Returning to Room List"
     }
     else {
       mapTable.isHidden = true

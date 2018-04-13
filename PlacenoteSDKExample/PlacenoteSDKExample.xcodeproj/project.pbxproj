@@ -15,6 +15,8 @@
 		A28C796D202A46F40052F3FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28C796B202A46F40052F3FB /* LaunchScreen.storyboard */; };
 		A28C7992202A48190052F3FB /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C7990202A48190052F3FB /* ShapeType.swift */; };
 		A28C7993202A48190052F3FB /* ShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C7991202A48190052F3FB /* ShapeManager.swift */; };
+		C13258332081287B0034D388 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13258322081287B0034D388 /* HomeViewController.swift */; };
+		C132583520813F0C0034D388 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132583420813F0C0034D388 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		A28C796E202A46F40052F3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A28C7990202A48190052F3FB /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
 		A28C7991202A48190052F3FB /* ShapeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeManager.swift; sourceTree = "<group>"; };
+		C13258322081287B0034D388 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C132583420813F0C0034D388 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		FC572E55F179D977C01BA451 /* Pods_PlacenoteSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacenoteSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,8 @@
 				A28C7991202A48190052F3FB /* ShapeManager.swift */,
 				A28C7990202A48190052F3FB /* ShapeType.swift */,
 				A28C7966202A46F40052F3FB /* Main.storyboard */,
+				C132583420813F0C0034D388 /* CustomTableViewCell.swift */,
+				C13258322081287B0034D388 /* HomeViewController.swift */,
 				A28C7969202A46F40052F3FB /* Assets.xcassets */,
 				A28C796B202A46F40052F3FB /* LaunchScreen.storyboard */,
 				A28C796E202A46F40052F3FB /* Info.plist */,
@@ -225,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C132583520813F0C0034D388 /* CustomTableViewCell.swift in Sources */,
+				C13258332081287B0034D388 /* HomeViewController.swift in Sources */,
 				A28C7965202A46F40052F3FB /* ViewController.swift in Sources */,
 				A28C7993202A48190052F3FB /* ShapeManager.swift in Sources */,
 				A28C7992202A48190052F3FB /* ShapeType.swift in Sources */,
