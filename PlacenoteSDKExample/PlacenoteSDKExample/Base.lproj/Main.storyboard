@@ -238,17 +238,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-00-QCU">
-                                <rect key="frame" x="42" y="84" width="330" height="588"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-00-QCU">
+                                <rect key="frame" x="30" y="154" width="354" height="428"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JH-AC-AIv">
-                                        <rect key="frame" x="135" y="492" width="37" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfW-RM-ZqQ">
+                                        <rect key="frame" x="114" y="40" width="126" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVJ-fR-lC9">
+                                        <rect key="frame" x="34" y="140" width="102" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7b-LN-NiN" userLabel="DeviceNameInput">
+                                        <rect key="frame" x="34" y="179" width="286" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbP-jv-tx0" userLabel="FunctionInput">
+                                        <rect key="frame" x="34" y="298" width="286" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JH-AC-AIv">
+                                        <rect key="frame" x="159" y="388" width="37" height="30"/>
                                         <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="saveDevice:" destination="ZXe-XF-ksy" eventType="touchUpInside" id="Vle-Se-jRY"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfW-RM-ZqQ">
-                                        <rect key="frame" x="102" y="36" width="126" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Function" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-mn-bez">
+                                        <rect key="frame" x="34" y="246" width="67" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -256,17 +281,39 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="588" id="3Uc-Qz-pqG"/>
+                                    <constraint firstAttribute="trailing" secondItem="k7b-LN-NiN" secondAttribute="trailing" constant="34" id="58q-fM-KS7"/>
+                                    <constraint firstAttribute="bottom" secondItem="4JH-AC-AIv" secondAttribute="bottom" constant="10" id="HHs-2r-yYC"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y9X-mn-bez" secondAttribute="trailing" id="IQ1-Lc-iEH"/>
+                                    <constraint firstItem="IfW-RM-ZqQ" firstAttribute="centerX" secondItem="4G0-00-QCU" secondAttribute="centerX" id="Lmk-Rm-ItJ"/>
+                                    <constraint firstItem="IfW-RM-ZqQ" firstAttribute="top" secondItem="4G0-00-QCU" secondAttribute="top" constant="40" id="O3L-ep-ieb"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zVJ-fR-lC9" secondAttribute="trailing" id="O7F-K8-Zug"/>
+                                    <constraint firstItem="4JH-AC-AIv" firstAttribute="centerX" secondItem="4G0-00-QCU" secondAttribute="centerX" id="PV8-Mz-xFr"/>
+                                    <constraint firstItem="Y9X-mn-bez" firstAttribute="top" secondItem="k7b-LN-NiN" secondAttribute="bottom" constant="37" id="SYM-jc-b1Z"/>
+                                    <constraint firstItem="zVJ-fR-lC9" firstAttribute="top" secondItem="IfW-RM-ZqQ" secondAttribute="bottom" constant="79" id="UhK-R2-z4h"/>
+                                    <constraint firstItem="zVJ-fR-lC9" firstAttribute="leading" secondItem="4G0-00-QCU" secondAttribute="leading" constant="34" id="Xny-Vw-ete"/>
+                                    <constraint firstItem="k7b-LN-NiN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y9X-mn-bez" secondAttribute="leading" id="XqM-m7-6R5"/>
+                                    <constraint firstItem="k7b-LN-NiN" firstAttribute="top" secondItem="zVJ-fR-lC9" secondAttribute="bottom" constant="18" id="YYb-wS-cKm"/>
+                                    <constraint firstItem="YbP-jv-tx0" firstAttribute="top" secondItem="Y9X-mn-bez" secondAttribute="bottom" constant="31" id="Yib-Nb-LCe"/>
+                                    <constraint firstAttribute="trailing" secondItem="YbP-jv-tx0" secondAttribute="trailing" constant="34" id="Yyn-ov-KXu"/>
+                                    <constraint firstItem="zVJ-fR-lC9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4G0-00-QCU" secondAttribute="leading" id="bK2-uJ-992"/>
+                                    <constraint firstItem="Y9X-mn-bez" firstAttribute="leading" secondItem="4G0-00-QCU" secondAttribute="leading" constant="34" id="dzL-u6-FNd"/>
+                                    <constraint firstItem="YbP-jv-tx0" firstAttribute="leading" secondItem="4G0-00-QCU" secondAttribute="leading" constant="34" id="rZS-ta-JH3"/>
+                                    <constraint firstItem="k7b-LN-NiN" firstAttribute="leading" secondItem="4G0-00-QCU" secondAttribute="leading" constant="34" id="vVa-aj-GeB"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4G0-00-QCU" firstAttribute="centerY" secondItem="6XH-UK-zbu" secondAttribute="centerY" id="5oN-be-zYE"/>
-                            <constraint firstItem="jEY-GN-PPu" firstAttribute="top" secondItem="4G0-00-QCU" secondAttribute="bottom" constant="64" id="8A0-7q-10R"/>
-                            <constraint firstItem="4G0-00-QCU" firstAttribute="centerX" secondItem="6XH-UK-zbu" secondAttribute="centerX" id="hZN-5L-uh6"/>
+                            <constraint firstItem="jEY-GN-PPu" firstAttribute="top" secondItem="4G0-00-QCU" secondAttribute="bottom" constant="154" id="2Ne-Gw-pZw"/>
+                            <constraint firstItem="4G0-00-QCU" firstAttribute="centerX" secondItem="6XH-UK-zbu" secondAttribute="centerX" id="J2k-PT-r90"/>
+                            <constraint firstItem="4G0-00-QCU" firstAttribute="centerY" secondItem="6XH-UK-zbu" secondAttribute="centerY" id="VZV-iW-2aa"/>
+                            <constraint firstItem="4G0-00-QCU" firstAttribute="leading" secondItem="6XH-UK-zbu" secondAttribute="leadingMargin" constant="10" id="pHU-of-6Oi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deviceNameInput" destination="k7b-LN-NiN" id="DZR-gJ-iOk"/>
+                        <outlet property="functionInput" destination="YbP-jv-tx0" id="PbO-0y-kRl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbF-8n-s6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
