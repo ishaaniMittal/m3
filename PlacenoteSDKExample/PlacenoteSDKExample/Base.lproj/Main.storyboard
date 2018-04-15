@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -224,6 +225,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="37.331334332833585"/>
+        </scene>
+        <!--Add Device Pop Up View Controller-->
+        <scene sceneID="sfr-ly-Ids">
+            <objects>
+                <viewController storyboardIdentifier="addDevicePopUp" id="ZXe-XF-ksy" customClass="AddDevicePopUpViewController" customModule="PlacenoteSDKExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2dI-U7-j1R"/>
+                        <viewControllerLayoutGuide type="bottom" id="jEY-GN-PPu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6XH-UK-zbu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-00-QCU">
+                                <rect key="frame" x="42" y="84" width="330" height="588"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JH-AC-AIv">
+                                        <rect key="frame" x="135" y="492" width="37" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Done"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfW-RM-ZqQ">
+                                        <rect key="frame" x="102" y="36" width="126" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="588" id="3Uc-Qz-pqG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4G0-00-QCU" firstAttribute="centerY" secondItem="6XH-UK-zbu" secondAttribute="centerY" id="5oN-be-zYE"/>
+                            <constraint firstItem="jEY-GN-PPu" firstAttribute="top" secondItem="4G0-00-QCU" secondAttribute="bottom" constant="64" id="8A0-7q-10R"/>
+                            <constraint firstItem="4G0-00-QCU" firstAttribute="centerX" secondItem="6XH-UK-zbu" secondAttribute="centerX" id="hZN-5L-uh6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbF-8n-s6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="36.684782608695656"/>
         </scene>
     </scenes>
     <resources>

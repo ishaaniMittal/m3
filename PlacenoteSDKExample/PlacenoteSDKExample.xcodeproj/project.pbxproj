@@ -17,6 +17,7 @@
 		A28C7993202A48190052F3FB /* ShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C7991202A48190052F3FB /* ShapeManager.swift */; };
 		C13258332081287B0034D388 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13258322081287B0034D388 /* HomeViewController.swift */; };
 		C132583520813F0C0034D388 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132583420813F0C0034D388 /* CustomTableViewCell.swift */; };
+		D32BBFBB2083D8B50089370E /* AddDevicePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32BBFBA2083D8B50089370E /* AddDevicePopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A28C7991202A48190052F3FB /* ShapeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeManager.swift; sourceTree = "<group>"; };
 		C13258322081287B0034D388 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C132583420813F0C0034D388 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D32BBFBA2083D8B50089370E /* AddDevicePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDevicePopUpViewController.swift; sourceTree = "<group>"; };
 		FC572E55F179D977C01BA451 /* Pods_PlacenoteSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacenoteSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				A28C7991202A48190052F3FB /* ShapeManager.swift */,
 				A28C7990202A48190052F3FB /* ShapeType.swift */,
 				A28C7966202A46F40052F3FB /* Main.storyboard */,
+				D32BBFBA2083D8B50089370E /* AddDevicePopUpViewController.swift */,
 				C132583420813F0C0034D388 /* CustomTableViewCell.swift */,
 				C13258322081287B0034D388 /* HomeViewController.swift */,
 				A28C7969202A46F40052F3FB /* Assets.xcassets */,
@@ -235,6 +238,7 @@
 				C13258332081287B0034D388 /* HomeViewController.swift in Sources */,
 				A28C7965202A46F40052F3FB /* ViewController.swift in Sources */,
 				A28C7993202A48190052F3FB /* ShapeManager.swift in Sources */,
+				D32BBFBB2083D8B50089370E /* AddDevicePopUpViewController.swift in Sources */,
 				A28C7992202A48190052F3FB /* ShapeType.swift in Sources */,
 				A28C7963202A46F40052F3FB /* AppDelegate.swift in Sources */,
 			);
@@ -375,12 +379,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SMMA6JAZA5;
+				DEVELOPMENT_TEAM = 92Y83ZAPBS;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PlacenoteSDKExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ACU98QC3SX;
+				PRODUCT_BUNDLE_IDENTIFIER = m3.ubicomp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,13 +397,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SMMA6JAZA5;
+				DEVELOPMENT_TEAM = 92Y83ZAPBS;
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = PlacenoteSDKExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ACU98QC3SX;
+				PRODUCT_BUNDLE_IDENTIFIER = m3.ubicomp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

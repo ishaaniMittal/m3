@@ -462,6 +462,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     if let result = hitTestResults.first {
       let pose = LibPlacenote.instance.processPose(pose: result.worldTransform)
       shapeManager.spawnRandomShape(position: pose.position())
+        
+        let addDevicePopUpVC = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "addDevicePopUp") as! AddDevicePopUpViewController
+        
+        self.addChildViewController(addDevicePopUpVC)
+        addDevicePopUpVC.view.frame = self.view.frame
+        self.view.addSubview(addDevicePopUpVC.view)
+        addDevicePopUpVC.didMove(toParentViewController: self)
 
     }
   }
