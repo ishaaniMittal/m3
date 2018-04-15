@@ -12,6 +12,8 @@ import SceneKit
 import ARKit
 import PlacenoteSDK
 
+var globalMap = [(String, [String : Any]?)]()
+
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UITableViewDelegate, UITableViewDataSource, PNDelegate, CLLocationManagerDelegate {
 
 
@@ -87,6 +89,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
         locationManager.startUpdatingLocation()
     }
+    
+    //Global Map
+    globalMap = maps
   }
 
   //Initialize view and scene
@@ -176,10 +181,23 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
   //Receive list of maps after it is retrieved. This is only fired when fetchMapList is called (see updateMapTable())
   func onMapList(success: Bool, mapList: [String: Any]) -> Void {
     maps.removeAll()
+    globalMap.removeAll()
     
-    //Return back to home page
+    print ("map List received")
+    for place in mapList {
+        maps.append((place.key, place.value as? [String: Any]))
+        //print ("place:" + place.key + ", metadata: ")
+        //print (place.value)
+    }
+    
+    globalMap = maps
+    self.mapTable.reloadData() //reads from maps array (see: tableView functions)
+    self.mapTable.isHidden = false
+    self.tapRecognizer?.isEnabled = false
+    
+    //Return back to home page with map
     performSegue(withIdentifier: "HomeView", sender: self)
-    
+   
     /*
     if (!success) {
       print ("failed to fetch map list")
@@ -332,6 +350,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
   //Label Map rows
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let map = self.maps[indexPath.row]
+    print ("map is", map)
     var cell:UITableViewCell? = mapTable.dequeueReusableCell(withIdentifier: map.0)
     if cell==nil {
       cell =  UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: map.0)
