@@ -54,6 +54,9 @@ class ShapeManager {
   private var shapePositions: [SCNVector3] = []
   private var shapeTypes: [ShapeType] = []
   private var shapeNodes: [SCNNode] = []
+  private var deviceNames:[String] = []
+  private var functions: [String] = []
+    
   
   public var shapesDrawn: Bool! = false
 
@@ -67,9 +70,11 @@ class ShapeManager {
     var shapeArray: [[String: [String: String]]] = []
     if (shapePositions.count > 0) {
       for i in 0...(shapePositions.count-1) {
-        shapeArray.append(["shape": ["style": "\(shapeTypes[i].rawValue)", "x": "\(shapePositions[i].x)",  "y": "\(shapePositions[i].y)",  "z": "\(shapePositions[i].z)" ]])
+        shapeArray.append(["shape": ["style": "\(shapeTypes[i].rawValue)", "x": "\(shapePositions[i].x)",  "y": "\(shapePositions[i].y)",  "z": "\(shapePositions[i].z)","deviceName":"\(deviceNames[i])","function":"\(functions[i])" ]])
       }
     }
+    
+    
     return shapeArray
   }
 
@@ -157,6 +162,14 @@ class ShapeManager {
     
     return geometryNode
   }
+    
+    
+    func saveDeviceDetails(deviceName: String, function: String){
+        deviceNames.append(deviceName)
+        functions.append(function)
+         print(deviceNames)
+         print(functions)
+    }
   
   
 }

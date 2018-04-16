@@ -13,6 +13,8 @@ class AddDevicePopUpViewController: UIViewController {
     @IBOutlet weak var deviceNameInput: UITextField!
     @IBOutlet weak var functionInput: UITextField!
     
+    public var shapeManager: ShapeManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +31,15 @@ class AddDevicePopUpViewController: UIViewController {
     @IBAction func saveDevice(_ sender: Any) {
        self.removeAnimate()
     }
+    
+    @IBAction func saveDeviceFunction(_ sender: Any) {
+        // shapeManager.saveDeviceFunction(function: functionInput.text!)
+    }
+    
+    @IBAction func saveDeviceName(_ sender: Any) {
+       //  shapeManager.saveDeviceName(deviceName: deviceNameInput.text!)
+    }
+    
     
     
     func showAnimate()

@@ -457,23 +457,71 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
   }
 
   @objc func handleTap(sender: UITapGestureRecognizer) {
+    // let shapeArray: [[String: [String: String]]] = []
+    let shape: [String: [String: String]]
+    
+   
+    
     let tapLocation = sender.location(in: scnView)
     let hitTestResults = scnView.hitTest(tapLocation, types: .featurePoint)
     if let result = hitTestResults.first {
       let pose = LibPlacenote.instance.processPose(pose: result.worldTransform)
+        for shape in shapeManager.getShapeArray(){
+            if(((shape["shape"]!["x"]! as NSString).floatValue == pose.position().x) || ((shape["shape"]!["y"]! as NSString).floatValue == pose.position().y) || ((shape["shape"]!["z"]! as NSString).floatValue == pose.position().z)) {
+                print("I am here")
+            }
+        }
       shapeManager.spawnRandomShape(position: pose.position())
+      self.showInputDialog()
         
-        let addDevicePopUpVC = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "addDevicePopUp") as! AddDevicePopUpViewController
         
-        self.addChildViewController(addDevicePopUpVC)
-        addDevicePopUpVC.view.frame = self.view.frame
-        self.view.addSubview(addDevicePopUpVC.view)
-        addDevicePopUpVC.didMove(toParentViewController: self)
+//        let addDevicePopUpVC = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "addDevicePopUp") as! AddDevicePopUpViewController
+//        addDevicePopUpVC.shapeManager = shapeManager
+//        self.addChildViewController(addDevicePopUpVC)
+//        addDevicePopUpVC.view.frame = self.view.frame
+//        self.view.addSubview(addDevicePopUpVC.view)
+//        addDevicePopUpVC.didMove(toParentViewController: self)
 
     }
   }
 
 
+    func showInputDialog() {
+        //Creating UIAlertController and
+        //Setting title and message for the alert dialog
+        let alertController = UIAlertController(title: "Add new Device", message: "Please enter device name and its function", preferredStyle: .alert)
+        
+        //the confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
+            
+            //getting the input values from user
+            let deviceName = alertController.textFields?[0].text
+            let function = alertController.textFields?[1].text
+            
+            self.shapeManager.saveDeviceDetails(deviceName: deviceName!, function: function!)
+            
+            
+        }
+        
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        //adding textfields to our dialog box
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter Device Name"
+        }
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter Function"
+        }
+        
+        //adding the action to dialogbox
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
   // MARK: - ARSCNViewDelegate
 
   // Override to create and configure nodes for anchors added to the view's session.
