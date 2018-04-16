@@ -13,6 +13,7 @@ import ARKit
 import PlacenoteSDK
 
 var globalMap = [(String, [String : Any]?)]()
+var ctrl = true
 
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UITableViewDelegate, UITableViewDataSource, PNDelegate, CLLocationManagerDelegate {
 
@@ -463,8 +464,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     if let result = hitTestResults.first {
       let pose = LibPlacenote.instance.processPose(pose: result.worldTransform)
       shapeManager.spawnRandomShape(position: pose.position())
-      self.showInputDialog()
-        
+                if (ctrl == true){
+                    self.showInputDialog()
+                    ctrl = false
+                }
+                else{
+                     performSegue(withIdentifier: "DeviceView", sender: self)
+                    ctrl = true
+                    print("deviceview segue code")
+                }
+
         
 //        let addDevicePopUpVC = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "addDevicePopUp") as! AddDevicePopUpViewController
 //        addDevicePopUpVC.shapeManager = shapeManager
