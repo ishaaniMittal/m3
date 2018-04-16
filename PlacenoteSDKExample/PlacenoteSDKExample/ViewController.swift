@@ -160,7 +160,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
       print ("Just localized, drawing view")
       shapeManager.drawView(parent: scnScene.rootNode) //just localized redraw the shapes
       if mappingStarted {
-       statusLabel.text = "Tap anywhere to add Shapes, Move Slowly"
+       statusLabel.text = "Tap anywhere to add Tags, Move Slowly"
       }
       else if localizationStarted {
         statusLabel.text = "Map Found!"
