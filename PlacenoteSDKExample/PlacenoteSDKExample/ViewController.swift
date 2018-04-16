@@ -457,20 +457,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
   }
 
   @objc func handleTap(sender: UITapGestureRecognizer) {
-    // let shapeArray: [[String: [String: String]]] = []
-    let shape: [String: [String: String]]
-    
-   
     
     let tapLocation = sender.location(in: scnView)
     let hitTestResults = scnView.hitTest(tapLocation, types: .featurePoint)
     if let result = hitTestResults.first {
       let pose = LibPlacenote.instance.processPose(pose: result.worldTransform)
-        for shape in shapeManager.getShapeArray(){
-            if(((shape["shape"]!["x"]! as NSString).floatValue == pose.position().x) || ((shape["shape"]!["y"]! as NSString).floatValue == pose.position().y) || (shape["shape"]!["z"]! as NSString).floatValue == pose.position().z)) {
-                print("I am here")
-            }
-        }
       shapeManager.spawnRandomShape(position: pose.position())
       self.showInputDialog()
         
